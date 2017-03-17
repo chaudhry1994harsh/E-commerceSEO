@@ -83,3 +83,4 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 | stars   | int(10) unsigned     | YES  |     | NULL    |       |
 | q_rated | int(10) unsigned     | YES  |     | NULL    |       |
 +---------+----------------------+------+-----+---------+-------+
+a
