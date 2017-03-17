@@ -30,7 +30,7 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 <img src="database/screenshots/client_d.PNG"  width="60%" height="60%">
 
 ### Product Listing table: plist
-<img src="database/screenshots/plist.PNG"  width="60%" height="60%">
+<img src="database/screenshots/plist.PNG"  width="80%" height="80%">
 
 ### Product Category, Options & Details table: c_mobiles (only for smartphone category)
 <img src="database/screenshots/c_mobiles.PNG"  width="60%" height="60%">
