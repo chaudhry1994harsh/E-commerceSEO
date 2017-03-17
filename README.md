@@ -21,8 +21,8 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 ## Database
 #### Database engine used for all the tables is InnoDB
 ### Administrator table: admins
-+-------+------------------+------+-----+---------+----------------+
-| Field | Type             | Null | Key | Default | Extra          |
++-------+------------------+------+-----+---------+----------------+ /n
+| Field | Type             | Null | Key | Default | Extra          | \n
 +-------+------------------+------+-----+---------+----------------+
 | id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
 | email | varchar(50)      | NO   | PRI | NULL    |                |
