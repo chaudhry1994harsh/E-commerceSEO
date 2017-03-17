@@ -21,66 +21,17 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 ## Database
 #### Database engine used for all the tables is InnoDB
 ### Administrator table: admins
-*+-------+------------------+------+-----+---------+----------------+ 
-*| Field | Type             | Null | Key | Default | Extra          | 
-*+-------+------------------+------+-----+---------+----------------+
-*| id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-*| email | varchar(50)      | NO   | PRI | NULL    |                |
-*| pwd   | varchar(20)      | NO   |     | NULL    |                |
-*+-------+------------------+------+-----+---------+----------------+
+<img src="database/screenshots/admins.png">
 
 ### Main Client table: client_m
-+-------+------------------+------+-----+---------+----------------+
-| Field | Type             | Null | Key | Default | Extra          |
-+-------+------------------+------+-----+---------+----------------+
-| email | varchar(50)      | NO   | PRI | NULL    |                |
-| pwd   | varchar(20)      | NO   |     | NULL    |                |
-| block | enum('T','F')    | YES  |     | F       |                |
-| id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-| auth  | enum('T','F')    | YES  |     | F       |                |
-| name  | varchar(20)      | NO   |     | NULL    |                |
-+-------+------------------+------+-----+---------+----------------+
+<img src="database/screenshots/client_m.png">
 
 ### Client Details table: client_d
-+----------+------------------+------+-----+---------+-------+
-| Field    | Type             | Null | Key | Default | Extra |
-+----------+------------------+------+-----+---------+-------+
-| id       | int(10) unsigned | NO   | PRI | NULL    |       |
-| pid      | int(10) unsigned | NO   | PRI | NULL    |       |
-| phone    | int(10) unsigned | YES  |     | NULL    |       |
-| add_lin1 | varchar(50)      | YES  |     | NULL    |       |
-| add_lin2 | varchar(50)      | YES  |     | NULL    |       |
-| state    | varchar(50)      | YES  |     | NULL    |       |
-| pin      | int(10) unsigned | YES  |     | NULL    |       |
-+----------+------------------+------+-----+---------+-------+
+<img src="database/screenshots/client_d.png">
 
 ### Product Listing table: plist
-+----------+----------------------------------------------------------------------------+------+-----+------------+----------------+
-| Field    | Type                                                                       | Null | Key | Default    | Extra          |
-+----------+----------------------------------------------------------------------------+------+-----+------------+----------------+
-| id       | int(10) unsigned                                                           | NO   | PRI | NULL       | auto_increment |
-| title    | varchar(50)                                                                | NO   | PRI | NULL       |                |
-| brand    | varchar(20)                                                                | YES  |     | NULL       |                |
-| descrip  | varchar(150)                                                               | YES  |     | NULL       |                |
-| catg     | enum('smartphones and mobiles','stationary','apperals:jeans','other/misc') | YES  |     | other/misc |                |
-| mtitle   | varchar(50)                                                                | YES  |     | NULL       |                |
-| mdescrip | varchar(100)                                                               | YES  |     | NULL       |                |
-| mkeywrd  | varchar(40)                                                                | YES  |     | NULL       |                |
-+----------+----------------------------------------------------------------------------+------+-----+------------+----------------+
+<img src="database/screenshots/plist.png">
 
 ### Product Category, Options & Details table: c_mobiles (only for smartphone category)
-+---------+----------------------+------+-----+---------+-------+
-| Field   | Type                 | Null | Key | Default | Extra |
-+---------+----------------------+------+-----+---------+-------+
-| id      | int(10) unsigned     | NO   | PRI | NULL    |       |
-| cid     | int(10) unsigned     | NO   | PRI | NULL    |       |
-| rom     | smallint(5) unsigned | YES  |     | NULL    |       |
-| color   | varchar(10)          | YES  |     | NULL    |       |
-| specs   | varchar(100)         | YES  |     | NULL    |       |
-| price   | int(10) unsigned     | NO   |     | NULL    |       |
-| photo   | varchar(50)          | YES  |     | NULL    |       |
-| q_sold  | int(10) unsigned     | YES  |     | NULL    |       |
-| stars   | int(10) unsigned     | YES  |     | NULL    |       |
-| q_rated | int(10) unsigned     | YES  |     | NULL    |       |
-+---------+----------------------+------+-----+---------+-------+
-a
+<img src="database/screenshots/c_mobiles.png">
+
