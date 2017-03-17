@@ -35,3 +35,4 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 ### Product Category, Options & Details table: c_mobiles (only for smartphone category)
 <img src="database/screenshots/c_mobiles.PNG"  width="60%" height="60%">
 
+#### NOTE: seo.sql dump file has been included in the database folder, use MySQLDump to tranfer data. The database has not been populated and only has tables as of now.
