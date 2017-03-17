@@ -79,7 +79,7 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 | specs   | varchar(100)         | YES  |     | NULL    |       |
 | price   | int(10) unsigned     | NO   |     | NULL    |       |
 | photo   | varchar(50)          | YES  |     | NULL    |       |
-| q_sold  | int(10) unsigned     | YES  |     | NULL    |       aaaaaaaaaaa
+| q_sold  | int(10) unsigned     | YES  |     | NULL    |       |
 | stars   | int(10) unsigned     | YES  |     | NULL    |       |
 | q_rated | int(10) unsigned     | YES  |     | NULL    |       |
 +---------+----------------------+------+-----+---------+-------+
