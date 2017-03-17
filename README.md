@@ -21,13 +21,13 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 ## Database
 #### Database engine used for all the tables is InnoDB
 ### Administrator table: admins
-+-------+------------------+------+-----+---------+----------------+ /n
-| Field | Type             | Null | Key | Default | Extra          | \n
-+-------+------------------+------+-----+---------+----------------+
-| id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
-| email | varchar(50)      | NO   | PRI | NULL    |                |
-| pwd   | varchar(20)      | NO   |     | NULL    |                |
-+-------+------------------+------+-----+---------+----------------+
+*+-------+------------------+------+-----+---------+----------------+ 
+*| Field | Type             | Null | Key | Default | Extra          | 
+*+-------+------------------+------+-----+---------+----------------+
+*| id    | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+*| email | varchar(50)      | NO   | PRI | NULL    |                |
+*| pwd   | varchar(20)      | NO   |     | NULL    |                |
+*+-------+------------------+------+-----+---------+----------------+
 
 ### Main Client table: client_m
 +-------+------------------+------+-----+---------+----------------+
