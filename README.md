@@ -21,7 +21,7 @@ Anuj Kumar Talan's GitHub URL - <a href="github.com">https://github.com/anujtala
 ## Database
 #### Database engine used for all the tables is InnoDB
 ### Administrator table: admins
-<img src="database/screenshots/admins.png">
+<img src="database\screenshots\admins.png">
 
 ### Main Client table: client_m
 <img src="database/screenshots/client_m.png">
