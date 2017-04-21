@@ -40,35 +40,28 @@ LOCK TABLES `admins` WRITE;
 UNLOCK TABLES;
 
 --
--- Table structure for table `c_mobiles`
+-- Table structure for table `cart`
 --
 
-DROP TABLE IF EXISTS `c_mobiles`;
+DROP TABLE IF EXISTS `cart`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `c_mobiles` (
-  `id` int(10) unsigned NOT NULL,
-  `cid` int(10) unsigned NOT NULL,
-  `rom` smallint(5) unsigned DEFAULT NULL,
-  `color` varchar(10) DEFAULT NULL,
-  `specs` varchar(100) DEFAULT NULL,
-  `price` int(10) unsigned NOT NULL,
-  `photo` varchar(50) DEFAULT NULL,
-  `q_sold` int(10) unsigned DEFAULT NULL,
-  `stars` int(10) unsigned DEFAULT NULL,
-  `q_rated` int(10) unsigned DEFAULT NULL,
-  PRIMARY KEY (`id`,`cid`),
-  CONSTRAINT `c_mobiles_ibfk_1` FOREIGN KEY (`id`) REFERENCES `plist` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+CREATE TABLE `cart` (
+  `client_id` int(10) unsigned NOT NULL,
+  `product_id` int(10) unsigned NOT NULL,
+  `quantity` int(10) unsigned NOT NULL,
+  `sub_total` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`client_id`,`product_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `c_mobiles`
+-- Dumping data for table `cart`
 --
 
-LOCK TABLES `c_mobiles` WRITE;
-/*!40000 ALTER TABLE `c_mobiles` DISABLE KEYS */;
-/*!40000 ALTER TABLE `c_mobiles` ENABLE KEYS */;
+LOCK TABLES `cart` WRITE;
+/*!40000 ALTER TABLE `cart` DISABLE KEYS */;
+/*!40000 ALTER TABLE `cart` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -131,6 +124,90 @@ INSERT INTO `client_m` VALUES ('harsh@gmail.com','harsh','F',1,'F','');
 UNLOCK TABLES;
 
 --
+-- Table structure for table `mobiles`
+--
+
+DROP TABLE IF EXISTS `mobiles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `mobiles` (
+  `id` int(10) unsigned NOT NULL,
+  `cid` int(10) unsigned NOT NULL,
+  `rom` smallint(5) unsigned DEFAULT NULL,
+  `color` varchar(10) DEFAULT NULL,
+  `specs` varchar(100) DEFAULT NULL,
+  `price` int(10) unsigned NOT NULL,
+  `photo` varchar(50) DEFAULT NULL,
+  `q_sold` int(10) unsigned DEFAULT NULL,
+  `stars` int(10) unsigned DEFAULT NULL,
+  `q_rated` int(10) unsigned DEFAULT NULL,
+  `stock` int(11) NOT NULL,
+  PRIMARY KEY (`id`,`cid`),
+  CONSTRAINT `mobiles_ibfk_1` FOREIGN KEY (`id`) REFERENCES `plist` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `mobiles`
+--
+
+LOCK TABLES `mobiles` WRITE;
+/*!40000 ALTER TABLE `mobiles` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mobiles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `order_detail`
+--
+
+DROP TABLE IF EXISTS `order_detail`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order_detail` (
+  `order_id` int(10) unsigned NOT NULL,
+  `product_id` int(10) unsigned NOT NULL,
+  `quantity` int(10) unsigned NOT NULL,
+  `sub_total` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`order_id`,`product_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order_detail`
+--
+
+LOCK TABLES `order_detail` WRITE;
+/*!40000 ALTER TABLE `order_detail` DISABLE KEYS */;
+/*!40000 ALTER TABLE `order_detail` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `order_list`
+--
+
+DROP TABLE IF EXISTS `order_list`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `order_list` (
+  `order_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `client_id` int(10) unsigned NOT NULL,
+  `stamp` datetime NOT NULL,
+  `total_quantity` int(10) unsigned NOT NULL,
+  `total_cost` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`order_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `order_list`
+--
+
+LOCK TABLES `order_list` WRITE;
+/*!40000 ALTER TABLE `order_list` DISABLE KEYS */;
+/*!40000 ALTER TABLE `order_list` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
 -- Table structure for table `plist`
 --
 
@@ -169,4 +246,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-03-17 20:17:10
+-- Dump completed on 2017-03-26 16:55:22

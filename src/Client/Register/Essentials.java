@@ -42,7 +42,7 @@ public class Essentials extends HttpServlet {
 		
 		Connection con=null;	//connection to the DB is declared
 		Statement st=null;	//statement to be sent to query the DB is declared
-		ResultSet rs=null;
+		ResultSet rs=null;	//resultset to store values returned by the DB is declared
 		try{
 			String name=request.getParameter("name");	//name entered by user on the page is stored in a string
 			String email=request.getParameter("email");	//email entered by user on the page is stored in a string
